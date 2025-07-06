@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Edit Data Siswa{% endblock %}
+{% block content %}
+<div class="form-wrapper">
+    <h2>Edit Data Siswa</h2>
+    <form action="{{ url_for('edit_siswa', id=siswa.id) }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" value="{{ siswa.nama_lengkap }}" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ siswa.email }}" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" rows="3" required>{{ siswa.alamat }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="foto">Ubah Foto Profil (Biarkan kosong jika tidak ingin diubah)</label>
+            <img src="{{ url_for('static', filename='uploads/' + siswa.foto) }}" class="profile-pic-preview" alt="Foto saat ini">
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+    </form>
+</div>
+{% endblock %}

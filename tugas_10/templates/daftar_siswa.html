@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Daftar Siswa Terdaftar{% endblock %}
+{% block content %}
+<div class="list-wrapper">
+    <h2>Daftar Siswa Terdaftar</h2>
+    <div class="table-responsive">
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Alamat</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for siswa in siswa_list %}
+                <tr>
+                    <td>
+                        <img src="{{ url_for('static', filename='uploads/' + siswa.foto) }}" alt="Foto {{ siswa.nama_lengkap }}" class="profile-pic" onerror="this.onerror=null;this.src='{{ url_for('static', filename='uploads/default.jpg') }}';">
+                    </td>
+                    <td>{{ siswa.nama_lengkap }}</td>
+                    <td>{{ siswa.email }}</td>
+                    <td>{{ siswa.alamat }}</td>
+                    <td class="action-buttons">
+                        <a href="{{ url_for('edit_siswa', id=siswa.id) }}" class="btn btn-secondary">Edit</a>
+                        <form action="{{ url_for('hapus_siswa', id=siswa.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ini?');">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5" style="text-align: center;">Belum ada siswa yang terdaftar.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
