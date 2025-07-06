@@ -3,7 +3,7 @@
 Ini adalah aplikasi web sederhana yang dibangun dengan Flask untuk mengelola data pendaftaran siswa. Aplikasi ini memungkinkan pengguna untuk mendaftar, melihat daftar siswa yang sudah terdaftar, mengedit informasi, dan menghapus data siswa.
 
 ## Tampilan formulir pendaftaran
-![image](https://github.com/user-attachments/assets/c2432fa6-e30d-45ac-bf6b-51d250a42409
+![image](https://github.com/user-attachments/assets/c2432fa6-e30d-45ac-bf6b-51d250a42409)
 
 ## Tampilan jika sudah mendaftar/riwayat
 ![image](https://github.com/user-attachments/assets/9628eafa-64a0-4d5b-970b-3990bbc8a897)
