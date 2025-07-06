@@ -11,6 +11,10 @@ Ini adalah aplikasi web sederhana yang dibangun dengan Flask untuk mengelola dat
 ## Pengguna dapat mengedit data diri mereka
 ![image](https://github.com/user-attachments/assets/345654b7-712a-4f5b-b81e-2f8d3100c890)
 
+#Tampilan riwayat dari PHP
+![image](https://github.com/user-attachments/assets/78896e9e-a771-43d2-9e04-ba1403ec0928)
+
+
 
 ## Fitur
 
